@@ -1,54 +1,64 @@
 <!doctype html>
 <html lang="en-US">
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Module 5</title>
-	<style>
-		
-	header {
-		background-color:cornflowerblue;
-		text-align: center;
-		font-size: 50px;	/*--is this responsive?--*/
-		color: floralwhite;
-	}
-		
-	.wrapper {				
-		display:grid; 		/*sets up the grid*/
-		grid-template-columns: repeat(4, 1fr); /*--can change to any percentage and amounts that = 100%-*/
-		/*--grid-template-columns: 1fr 2fr 1fr; /*--recommended to use fr instead of percentages--*/
-		/*--can repeat pattern or singles using grid-template-columns:repeat(3, 1fr 2fr)--*/
-	    grid-column-gap: 1em; /*--creates a gap between columns--*/
-		grid-row-gap: 1em;		/*--creates a gap between rows--*/
-		/*--grid-gap: 1em; would do the same thing as the two above combined--*/
-		/*--grid-auto-rows:100px; --would set all of the heights to 100px fixed--*/
-		grid-auto-rows: minmax(70px, auto); /*--also sets heights to 100px but stretches height if needed instead of running outside of the box--*/
-	}
-	
-	.nested{ /*--turns the nested class on line 62 into a grid--*/
-      display:grid;
-      grid-template-columns:repeat(3, 1fr);
-      grid-auto-rows: 100px;
-		grid-gap: 1em;
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Module 5</title>
+ 		<style>
+  
+ 			header {
+ 				 background-color:cornflowerblue;
+ 				 text-align: center;
+  				 font-size: 50px; /*--is this responsive?--*/
+  				 color: floralwhite;
+ }
 
-	}
-		.nested > div{
-      border:#333 1px solid;
-      padding:1em;
-		}
-		
-		.wrapper > div{
-		background: royalblue; 
-		padding: 2em;
-	}
-		
-		.wrapper > div:nth-child(odd){
-		background: cadetblue;	
-	}
-		.history {
-			grid-column: 1/4;
-		}
-	
-		
+ul {     /*--changed some here--*/
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background:darkturquoise;
+  display:flex;
+justify-content:space-around;
+}
+li {
+  display: inline;
+}
+a {
+text-decoration:none;
+color:white;
+}
+  
+ .wrapper {    
+  display:grid;   /*sets up the grid*/
+  grid-template-columns: repeat(4, 1fr); /*--can change to any percentage and amounts that = 100%-*/
+  /*--grid-template-columns: 1fr 2fr 1fr; /*--recommended to use fr instead of percentages--*/
+  /*--can repeat pattern or singles using grid-template-columns:repeat(3, 1fr 2fr)--*/
+     grid-column-gap: 1em; /*--creates a gap between columns--*/
+  grid-row-gap: 1em;  /*--creates a gap between rows--*/
+  /*--grid-gap: 1em; would do the same thing as the two above combined--*/
+  /*--grid-auto-rows:100px; --would set all of the heights to 100px fixed--*/
+  grid-auto-rows: minmax(70px, auto); /*--also sets heights to 100px but stretches height if needed instead of running outside of the box--*/
+ }
+ 
+ 
+  
+  .wrapper > div{
+  background: royalblue; 
+  padding: 2em;
+ }
+  
+  .wrapper > div:nth-child(odd){
+  background: cadetblue; 
+ }
+  .history {
+   grid-column: 1/4;
+  }
+ 
+ }
+  .sketch {
+   grid-column: 1/5;
+  }
+	 
 @media only screen and (max-width:800px) {
   /* For tablets: */
   .main {
@@ -64,67 +74,80 @@
   .menu, .main, .right {
     width: 100%;
   }
-	
-	</style>
+ 
+ </style>
 </head>
-
 <body>
-	<header><h1>Animation</h1></header>
-	
-	<div class="wrapper">
-		
-	<div class="history">
-	
+ <header>
+  <h1>Animation</h1>
+<ul>
+  <li><a href="#home">Home</a></li>        <!--nave bar-->
+  <li><a href="#types">Types of Animation</a></li>
+  <li><a href="#contact">Contact</a></li>
+  <li><a href="#about">About</a></li>
+</ul>
+ </header>
+ 
+ <div class="wrapper">
+  
+ <div class="history">
+ 
     <h1>The History of Animation</h1>
     <p>  In the early 1900's, Emily Cohl created the very first true animated film called <i>Fantasmagorie.</i>At the time chalkboard characters were popular on vaudevilles circuits, so the drawings were filmed in negative to give the animation the apperance of a chalkboard drawing brought to life.</p>
-		
-	<p>In 1915, Max Fleischer developed the rotoscope technique, where projection equipment is used to trace figures from stills of live-action footage. This method allowed animators to get a better understanding of the finer aspects of a moving form to create realistic, fluid motion in animated pieces. Fleischer's patent on rotoscoping expired in 1934, allowing other animators to swoop in and freely use the technique.</p>
+  
+ <p>In 1915, Max Fleischer developed the rotoscope technique, where projection equipment is used to trace figures from stills of live-action footage. This method allowed animators to get a better understanding of the finer aspects of a moving form to create realistic, fluid motion in animated pieces. Fleischer's patent on rotoscoping expired in 1934, allowing other animators to swoop in and freely use the technique.</p>
   </div>
-		
-			<div>
-	
-			<h2>First Animated Video</h2>
+  
+   <div>
+ 
+   <h2>First Animated Video</h2>
       
-			
-	<iframe width="300" height="200" src="https://www.youtube.com/embed/swh448fLd1g" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-			
+   
+ <iframe width="300" height="200" src="https://www.youtube.com/embed/swh448fLd1g" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+   
     </div>
-		
-		<div>
-	
-			<h2>Types of Animation</h2>
+  
+  <div>
+ 
+   <h2><a name="types"></a>Types of Animation</h2>
       <p>There are three types of animation Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel obcaecati perspiciatis iure debitis beatae accusamus sunt dolores, nemo pariatur blanditiis?</p>
-			
-		
+   
+  
     </div>
-			<div>
-	
-			<h2>2D</h2>
+   <div>
+ 
+   <h2>2D</h2>
       <p>2D animation is doing lots of drawings a little different every time. By doing this looking at the picture it makes the image look like it's moving. This moves at 24 frames per second and has been around for thousands of years.</p>
-			
-			<img src="images/boywalking.png" style="width:50%" alt="picture of boy walking">
+   
+   <img src="images/boywalking.png" style="width:50%" alt="picture of boy walking">
     </div>
-		
-		<div>
-			<h2>Stop Motion</h2>
-		<p>Stop motion is an animated filmmaking technique in which objects are physically manipulated in small increments between individually photographed frames so that they will appear to exhibit independent motion or change when the series of frames is played back</p>
-			<img src="images/gumby.jpg" style="width:50%" alt="picture of gumby">
-			
-			</div>
-		
-		<div>
-			<h2>3D</h2>
-		<p> 3D animation is the art of using motion to bring characters, vehicles, props, and more to life within TV shows, films, and games.
-			</p>
-			<img src="images/madagascar.jpg" style="width:50%" alt="picture of zebra and lion from madagascar">
-			
-		
-		</div>
-		
-	
-		
-		</div>
-		
-	
+  
+  <div>
+   <h2>Stop Motion</h2>
+  <p>Stop motion is an animated filmmaking technique in which objects are physically manipulated in small increments between individually photographed frames so that they will appear to exhibit independent motion or change when the series of frames is played back</p>
+   <img src="images/gumby.jpg" style="width:50%" alt="picture of gumby">
+   
+   </div>
+  
+  <div>
+   <h2>3D</h2>
+  <p> 3D animation is the art of using motion to bring characters, vehicles, props, and more to life within TV shows, films, and games.
+   </p>
+   <img src="images/madagascar.jpg" style="width:50%" alt="picture of zebra and lion from madagascar">
+   
+  
+  </div>
+  
+ 
+<div class="sketch">	 
+	 <h2>Pre-development Design</h2>
+      
+ <img src="images/sketch.jpg" style="width:50%" alt="sketch of webpage">
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem possimus, nostrum dolore et id itaque quo veniam laboriosam repellendus numquam ab aut autem quod officiis, atque repellat soluta. Repellendus voluptate assumenda qui quasi veniam possimus praesentium maxime iusto eveniet esse ea voluptates dolorum nostrum sit tempora unde voluptatum odio at veritatis, nesciunt optio? Atque, fugit corporis voluptate impedit officiis reiciendis, non, quaerat dignissimos saepe mollitia esse eligendi? Quis laborum veniam architecto nemo fugit, natus perspiciatis, beatae quasi excepturi mollitia nisi!</p> 
+	 </div>
+  
+  </div>
+  
+ 
 </body>
 </html>
